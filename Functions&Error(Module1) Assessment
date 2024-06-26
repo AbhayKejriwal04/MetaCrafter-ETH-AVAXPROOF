@@ -11,7 +11,7 @@ contract SmartContractProject{
 
     //functon with require statement
     function set(uint _new) public {
-        require(owner==msg.sender, "Only thw owner can set the value");
+        require(owner==msg.sender, "Only the owner can set the value");
         value=_new;
     }
 
@@ -20,7 +20,7 @@ contract SmartContractProject{
         assert(value !=0);
     }
 
-    //fucntion with rever statement
+    //fucntion with revert statement
     function reset() public {
         if(msg.sender != owner){
             revert("Only the owner can reset the value");
